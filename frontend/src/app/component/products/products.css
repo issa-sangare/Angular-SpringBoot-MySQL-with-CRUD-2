@@ -1,0 +1,15 @@
+.mdc-card {
+  margin: 2%;
+}
+
+.mdc-button {
+  margin: 2px;
+}
+
+.center {
+  text-align: center;
+}
+
+mat-card-content, ng-container, ng-content {
+  padding: 1%;
+}
