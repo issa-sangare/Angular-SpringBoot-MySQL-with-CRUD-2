@@ -1,6 +1,6 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
 import {MatCard, MatCardContent, MatCardHeader} from '@angular/material/card';
-import {MatButton} from '@angular/material/button';
+import {MatButton, MatIconButton} from '@angular/material/button';
 import {AddProductComponent} from '../add-product/add-product';
 import { MatDialog } from '@angular/material/dialog';
 import {Product} from '../../model/Product';
@@ -19,6 +19,7 @@ import {
 import {DatePipe, DecimalPipe} from '@angular/common';
 import {ViewProductComponent} from '../view-product/view-product';
 import {MatIcon} from '@angular/material/icon';
+import {MatMenu, MatMenuItem, MatMenuTrigger} from '@angular/material/menu';
 
 @Component({
   selector: 'app-products',
@@ -39,7 +40,11 @@ import {MatIcon} from '@angular/material/icon';
     MatRowDef,
     DatePipe,
     DecimalPipe,
-    MatIcon
+    MatIcon,
+    MatMenuItem,
+    MatMenu,
+    MatMenuTrigger,
+    MatIconButton
   ],
   templateUrl: './products.html',
   styleUrl: './products.css',
@@ -47,7 +52,7 @@ import {MatIcon} from '@angular/material/icon';
 export class ProductsComponent implements OnInit, OnDestroy {
   productList: Product[] = [];
   dataSource = new MatTableDataSource<Product>([]);
-  displayedColumns: string[] = ['id', 'name', 'price', 'quantity', 'category', 'action'];
+  displayedColumns: string[] = ['name', 'price', 'quantity', 'category', 'action'];
   subscription: Subscription = new Subscription();
 
   constructor(private dialog : MatDialog, private service: ProductService, private toastr: ToastrService) {
