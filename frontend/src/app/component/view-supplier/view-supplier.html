@@ -1,0 +1,17 @@
+<mat-card *ngIf="supplier as p">
+  <mat-card-header>
+    <h2>{{ title }}</h2>
+  </mat-card-header>
+
+  <mat-card-content>
+    <p><strong>Name:</strong> {{ p.name }}</p>
+    <p><strong>Company Name:</strong> {{ p.companyName }}</p>
+    <p><strong>Address:</strong> {{ p.address }}</p>
+    <p><strong>Email:</strong> {{ p.email }}</p>
+    <p><strong>Phone:</strong> {{ p.email }}</p>
+  </mat-card-content>
+
+  <mat-card-actions>
+    <button mat-raised-button color="accent" (click)="closePopUp()">Close</button>
+  </mat-card-actions>
+</mat-card>

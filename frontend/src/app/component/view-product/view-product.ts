@@ -2,9 +2,9 @@ import { Component, Inject, OnInit, ChangeDetectorRef } from '@angular/core';
 import { MatCard, MatCardContent, MatCardHeader, MatCardActions } from '@angular/material/card';
 import { MatButton } from '@angular/material/button';
 import { MAT_DIALOG_DATA, MatDialogRef } from '@angular/material/dialog';
-import { CommonModule } from '@angular/common';
+import {CommonModule, NgOptimizedImage} from '@angular/common';
 import { Product } from '../../model/Product';
-import { ProductService } from '../../service/products';
+import { ProductsService } from '../../service/products';
 
 @Component({
   selector: 'app-view-product',
@@ -15,7 +15,8 @@ import { ProductService } from '../../service/products';
     MatCardHeader,
     MatCardContent,
     MatCardActions,
-    MatButton
+    MatButton,
+    NgOptimizedImage
   ],
   templateUrl: './view-product.html',
   styleUrl: './view-product.css'
@@ -26,7 +27,7 @@ export class ViewProductComponent implements OnInit {
   title = 'Product Details';
 
   constructor(
-    private service: ProductService,
+    private service: ProductsService,
     private ref: MatDialogRef<ViewProductComponent>,
     private cd: ChangeDetectorRef,   // 👈 AJOUT ICI
     @Inject(MAT_DIALOG_DATA) public data: any

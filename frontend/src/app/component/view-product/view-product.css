@@ -10,3 +10,23 @@
 .mdc-button {
   margin: 2px;
 }
+
+mat-card-actions {
+  padding-top: 3%;
+  padding-bottom: 2%;
+}
+
+.cont {
+  display: flex;
+  gap: 4rem;
+  margin-top: 1.5rem;
+  align-items: center;
+}
+
+.description {
+  overflow-wrap: anywhere;
+}
+
+p {
+  font-size: 1.2rem;
+}

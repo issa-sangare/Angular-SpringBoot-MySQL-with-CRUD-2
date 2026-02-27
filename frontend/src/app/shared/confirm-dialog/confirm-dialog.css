@@ -1,0 +1,19 @@
+.dialog-container {
+  text-align: center;
+  padding: 1.5rem;
+  max-width: 600px;
+}
+
+.icon-container {
+  margin-bottom: 1rem;
+}
+
+mat-icon {
+  font-size: 48px;
+}
+
+.actions {
+  margin-top: 1.5rem;
+  display: flex;
+  justify-content: space-between;
+}

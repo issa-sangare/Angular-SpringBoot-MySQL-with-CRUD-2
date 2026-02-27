@@ -1,17 +1,18 @@
-.mdc-card {
-  margin: 2%;
-}
-
 .mdc-button {
   margin: 2px;
 }
 
-.center {
-  text-align: center;
+mat-form-field.Hinput {
+  width: 25%;
 }
 
+@media (max-width: 768px) {
+  .search-field {
+    width: 100%;
+  }
+}
 mat-card-content, ng-container, ng-content {
-  padding: 1% 1% 0 1%;
+  padding-top: 1%;
 }
 
 
